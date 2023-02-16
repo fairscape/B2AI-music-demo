@@ -9,8 +9,7 @@ RUN apt-get install git && \
 
 WORKDIR MuSIC
 
-#COPY requirements.txt ./installation/requirements.txt
-
+COPY requirements.txt ./installation/requirements.txt
 RUN pip install -r ./installation/requirements.txt
 
 # install the statsmodels package
