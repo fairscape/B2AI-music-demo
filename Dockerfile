@@ -14,13 +14,13 @@ RUN apt-get install -y build-essential python-dev libxml2 libxml2-dev zlib1g-dev
 
 WORKDIR MuSIC
 
+# install the statsmodels package
+RUN conda install -c conda-forge statsmodels
+RUN pip install dill pandas sklearn
+
 COPY requirements.txt ./installation/requirements.txt
 RUN pip install -r ./installation/requirements.txt; exit 0
 
-# install the statsmodels package
-#RUN conda install -c conda-forge statsmodels
-#RUN pip install dill pandas skylearn
-#RUN pip install -r ./installation/requirements.txt; exit 0
 
 # install CliXO and DDOT dependancy
 #RUN ./installation/install.sh; exit 0
