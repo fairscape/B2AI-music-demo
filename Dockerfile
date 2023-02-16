@@ -8,7 +8,7 @@ RUN apt-get update && \
         git clone https://github.com/idekerlab/MuSIC.git 
 
 
-RUN apt-get install build-essential python-dev libxml2 libxml2-dev zlib1g-dev libmpc-dev
+RUN apt-get install -y build-essential python-dev libxml2 libxml2-dev zlib1g-dev libmpc-dev
 
 #RUN apt-get install libigraph0-dev
 
