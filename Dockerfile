@@ -16,7 +16,7 @@ WORKDIR MuSIC
 
 # install the statsmodels package
 RUN conda install -c conda-forge statsmodels
-RUN pip install dill pandas sklearn
+#RUN pip install dill pandas sklearn
 
 COPY requirements.txt ./installation/requirements.txt
 RUN pip install -r ./installation/requirements.txt; exit 0
