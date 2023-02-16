@@ -1,11 +1,13 @@
-FROM python:3.11.2-buster 
+FROM continuumio/miniconda3:22.11.1-alpine
+#FROM python:3.11.2-buster 
+
+# install MuSIC
+RUN apk update && \
+        apk add git && \
+        git clone https://github.com/idekerlab/MuSIC.git 
 
 
 #RUN apt-get install build-essential python-dev libxml2 libxml2-dev zlib1g-dev libigraph0-dev libmpc-dev
-
-# install MuSIC
-RUN apt-get install git && \
-        git clone https://github.com/idekerlab/MuSIC.git 
 
 WORKDIR MuSIC
 
