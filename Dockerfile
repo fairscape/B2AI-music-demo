@@ -1,18 +1,19 @@
-FROM continuumio/miniconda3:22.11.1-alpine
+FROM continuumio/miniconda3:masteR
+
 #FROM python:3.11.2-buster 
 
 # install MuSIC
-RUN apk update && \
-        apk add git && \
+RUN apt-get update && \
+        apt-get install git && \
         git clone https://github.com/idekerlab/MuSIC.git 
 
 
-#RUN apt-get install build-essential python-dev libxml2 libxml2-dev zlib1g-dev libigraph0-dev libmpc-dev
+RUN apt-get install build-essential python-dev libxml2 libxml2-dev zlib1g-dev libigraph0-dev libmpc-dev
 
 WORKDIR MuSIC
 
 COPY requirements.txt ./installation/requirements.txt
-RUN pip install -r ./installation/requirements.txt
+RUN pip install -r ./installation/requirements.txt; exit 0
 
 # install the statsmodels package
 #RUN conda install -c conda-forge statsmodels
