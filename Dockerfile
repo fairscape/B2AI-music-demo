@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:masteR
+FROM continuumio/miniconda3:master
 
 #FROM python:3.11.2-buster 
 
