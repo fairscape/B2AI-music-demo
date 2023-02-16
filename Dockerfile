@@ -1,7 +1,7 @@
 FROM python:3.11.2-buster 
 
 
-RUN apt-get install build-essential python-dev libxml2 libxml2-dev zlib1g-dev libigraph0-dev libmpc-dev
+#RUN apt-get install build-essential python-dev libxml2 libxml2-dev zlib1g-dev libigraph0-dev libmpc-dev
 
 # install MuSIC
 RUN apt-get install git && \
