@@ -15,11 +15,11 @@ RUN apt-get install -y build-essential python-dev libxml2 libxml2-dev zlib1g-dev
 WORKDIR MuSIC
 
 # install the statsmodels package
+RUN pip install tdqm
 RUN conda install -c conda-forge statsmodels
 RUN conda install pandas 
-RUN conda install sklearn
-RUN conda install dill
-RUN pip install tdqm
+RUN conda install -c anaconda scikit-learn
+RUN conda install -c conda-forge dill 
 #RUN pip install dill pandas sklearn
 
 #COPY requirements.txt ./installation/requirements.txt
